@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Pilavee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                <img src="logo1.png" alt="Pilavee Logo">
+            </a>            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <!-- Auth link placeholder - will be updated by auth.js -->
+                <li><a href="login.html" id="auth-link" class="button secondary-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-form-section">
+            <div class="container">
+                <h2 class="section-title">Create Your Account</h2>
+                <form id="signup-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="signup-firstName">First Name</label>
+                        <input type="text" id="signup-firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-lastName">Last Name</label>
+                        <input type="text" id="signup-lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-phone">Phone Number</label>
+                        <input type="tel" id="signup-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" required>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="button primary-button">Sign Up</button>
+                    </div>
+                    <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+                    <div id="auth-message" class="message-container"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+       <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Pilavee</h3>
+                <p>&copy; 2025 Pilavee. All rights reserved.</p>
+                <p>Powered By <a href="https://www.neksusteam.com" target="_blank" rel="noopener noreferrer">Neksus Team</a>.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Email: Vanessabaz77@gmail.com</p>
+                <p>Phone: +961 76536736</p>
+                <p>Address: Mount Lebanon, Metn, New Jdeideh, near Terrible</p>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pilavee_?utm_source=ig_web_button_share_sheet&igsh=MnRjeTZheWx6cGhj" class="social-icon-link" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://wa.me/96176536736?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20Pilates%20classes." class="social-icon-link" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Firebase init must be loaded before auth.js -->
+    <script type="module" src="firebase-init.js"></script>
+    <!-- Link to your authentication logic script -->
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

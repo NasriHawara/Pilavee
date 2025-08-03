@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Class - Pilavee</title>
+    <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                <img src="logo1.png" alt="Pilavee Logo">
+            </a>            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="#booking-cta">Book Now</a></li>
+                <!-- NEW: Placeholder for Login/Profile link -->
+                <li><a href="login.html" id="auth-link" class="button secondary-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header / Hero for Booking Page -->
+        <section class="page-hero-section">
+            <div class="page-hero-overlay"></div>
+            <div class="page-hero-content">
+                <h1>Book Your Pilavee Experience</h1>
+                <p>Ready to find your balance? Select your preferred instructor and available class below.</p>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="booking-form-section">
+            <div class="container">
+                <h2 class="section-title">Your Booking Request</h2>
+                <form class="booking-form"   action="https://formspree.io/f/xqaldndl" method="POST">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <!-- Preferred Instructor moved here -->
+                    <div class="form-group">
+                        <label for="preferredInstructor">Preferred Instructor <span class="required">*</span></label>
+                        <select id="preferredInstructor" name="preferredInstructor" required>
+                            <option value="">Select Instructor</option>
+                            <option value="any">Any Instructor</option>
+                            <!-- FIX: Changed values to match Firestore exactly -->
+                            <option value="instructorA">Instructor A</option>
+                            <option value="instructorB">Instructor B</option>
+                            <option value="instructorC">Instructor C</option>
+                        </select>
+                    </div>
+
+                    <!-- New dynamic dropdown for available classes -->
+                    <div class="form-group">
+                        <label for="availableClass">Available Class (Date & Time) <span class="required">*</span></label>
+                        <select id="availableClass" name="availableClass" required disabled>
+                            <option value="">Select an instructor first</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes / Requests</label>
+                        <textarea id="notes" name="notes" rows="4"></textarea>
+                    </div>
+
+                    <div class="cancellation-policy-checkboxes">
+                        <h3>Cancellation Policy Agreement <span class="required">*</span></h3>
+                        <div class="policy-item">
+                            <input type="checkbox" id="agreePolicy1" name="agreePolicy1" required>
+                            <label for="agreePolicy1">I understand that I must cancel or reschedule my session at least <strong>6 hours</strong> in advance.</label>
+                        </div>
+                        <div class="policy-item">
+                            <input type="checkbox" id="agreePolicy2" name="agreePolicy2" required>
+                            <label for="agreePolicy2">I acknowledge that if I cancel late or don’t show up, the session will be charged or deducted from my package.</label>
+                        </div>
+                        <div class="policy-item">
+                            <input type="checkbox" id="agreePolicy3" name="agreePolicy3" required>
+                            <label for="agreePolicy3">I understand that due to limited reformer spots, my commitment helps Pilavee stay organized.</label>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: var(--color-text-dark);">Thanks for understanding and see you on the reformer! 💕</p>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="button primary-button">Submit Booking Request</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Pilavee</h3>
+                <p>&copy; 2025 Pilavee. All rights reserved.</p>
+                <p>Powered By <a href="https://www.neksusteam.com" target="_blank" rel="noopener noreferrer">Neksus Team</a>.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Email: Vanessabaz77@gmail.com</p>
+                <p>Phone: +961 76536736</p>
+                <p>Address: Mount Lebanon, Metn, New Jdeideh, near Terrible</p>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pilavee_?utm_source=ig_web_button_share_sheet&igsh=MnRjeTZheWx6cGhj" class="social-icon-link" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://wa.me/96176536736?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20Pilates%20classes." class="social-icon-link" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to your booking logic JavaScript file -->
+    <script type="module" src="booking.js"></script>
+
+        <!-- Firebase init must be loaded before auth.js and other scripts that use Firebase -->
+    <script type="module" src="firebase-init.js"></script>
+    <!-- NEW: Link to your authentication logic script -->
+    <script type="module" src="auth.js"></script>
+
+</body>
+</html>

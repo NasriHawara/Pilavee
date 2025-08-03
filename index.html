@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilavee - Pilates & Wellness</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (e.g., social media) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font: Inter (for general text) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                <img src="logo1.png" alt="Pilavee Logo">
+            </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <!-- NEW: Placeholder for Login/Profile link -->
+                <li><a href="login.html" id="auth-link" class="button secondary-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Sculpt. Stretch. Strengthen.</h1>
+                <p>Pilates For Everybody And Every Goal.</p>
+                <a href="#booking-cta" class="button primary-button">Book Your First Class</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Our Studio</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>At Pilavee, we believe in a holistic approach to wellness. Our certified instructors are dedicated to guiding you through personalized Pilates sessions, helping you improve flexibility, build core strength, and achieve mental clarity. We offer a variety of classes designed for all levels, from beginners to advanced practitioners.</p>
+                        <p>Our modern studio is equipped with state-of-the-art Reformer machines and provides a tranquil space where you can focus on your body and mind. Join our community and embark on a journey to a healthier, more balanced you.</p>
+                        <a href="about.html" class="button secondary-button">Learn More About Us</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="aboutv.jpeg" alt="Pilates Studio Interior" class="rounded-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Classes Preview Section (MODIFIED) -->
+     <section class="classes-preview-section">
+    <div class="container">
+        <h2 class="section-title">Our Reformer Pilates Classes</h2>
+        <div class="class-grid">
+            <div class="reformer-description-card">
+                <h3>What is Reformer Pilates?</h3>
+                <p>Reformer Pilates is a full-body workout done on a machine called the reformer. It uses springs, straps, and a sliding carriage to build strength, improve posture, and increase flexibility all while being gentle on your joints. It’s perfect for toning, lengthening, and connecting deeper with your body.</p>
+                <p>Our expert instructors guide you through dynamic movements, helping you improve posture, alleviate back pain, and enhance overall body awareness. It's an invigorating workout that delivers remarkable results.</p>
+            </div>
+            <div class="reformer-description-card">
+                <h3>Benefits of Reformer Pilates</h3>
+                <ul>
+                    <li>Enhanced Core Strength & Stability</li>
+                    <li>Improved Flexibility & Posture</li>
+                    <li>Increased Muscle Tone & Endurance</li>
+                    <li>Better Balance & Coordination</li>
+                    <li>Reduced Stress & Mental Clarity</li>
+                    <li>Injury Prevention & Rehabilitation Support</li>
+                    <li>Low-Impact, High Results</li>
+                    <li>Safe on joints, powerful on results.</li>
+                </ul>
+                <p>Join us at Pilavee for your ultimate transformation and wellness journey.</p>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="schedule.html" class="button primary-button">View Full Schedule</a>
+        </div>
+    </div>
+</section>
+        <!-- Booking Call to Action Section -->
+        <section id="booking-cta" class="booking-cta-section">
+            <div class="container">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Book your introductory class or a private session today and experience the Pilavee difference.</p>
+                <a href="booking.html" class="button primary-button">Book Your Appointment</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Pilavee</h3>
+                <p>&copy; 2025 Pilavee. All rights reserved.</p>
+                <p>Powered By <a href="https://www.neksusteam.com" target="_blank" rel="noopener noreferrer">Neksus Team</a>.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Email: Vanessabaz77@gmail.com</p>
+                <p>Phone: +961 76536736</p>
+                <p>Address: Mount Lebanon, Metn, New Jdeideh, near Terrible</p>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pilavee_?utm_source=ig_web_button_share_sheet&igsh=MnRjeTZheWx6cGhj" class="social-icon-link" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://wa.me/96176536736?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20Pilates%20classes." class="social-icon-link" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Firebase init must be loaded before auth.js and other scripts that use Firebase -->
+    <script type="module" src="firebase-init.js"></script>
+    <!-- NEW: Link to your authentication logic script -->
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

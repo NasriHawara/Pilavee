@@ -90,7 +90,7 @@ function renderAdminDashboard(user) {
     if (!adminContentDiv) return;
 
     adminContentDiv.innerHTML = `
-        <h2 class="section-title">Welcome, Admin!</h2>
+        <h2 class="section-title">Welcome, Vanessa!</h2>
         <p>You are logged in as: <strong>${user.email}</strong></p>
         <div class="admin-dashboard-overview">
             <div class="overview-card">
@@ -867,3 +867,4 @@ onAuthStateChanged(auth, async (user) => {
         }, 1500);
     }
 });
+
